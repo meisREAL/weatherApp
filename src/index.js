@@ -1,0 +1,1 @@
+alert('ping ping');
