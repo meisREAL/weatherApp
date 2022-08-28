@@ -1,4 +1,4 @@
-import { talkToAPI } from "./apiFetch";
+import { talkToAPI, sendCity } from "./apiFetch";
 
 const mainWindow = (function () {
     const contentWindow = document.querySelector('#content');
@@ -19,6 +19,9 @@ const mainWindow = (function () {
         const searchBtn = document.createElement('div');
         searchBtn.setAttribute('id', 'searchBtn');
         searchBtn.textContent = 'Search';
+        searchBtn.onclick = function () {
+            sendCity();
+        }
         topHalfCard.appendChild(searchBtn);
 
         const showCity = document.createElement('div');
