@@ -1,3 +1,4 @@
+import { talkToAPI } from "./apiFetch";
 
 const mainWindow = (function () {
     const contentWindow = document.querySelector('#content');
@@ -27,7 +28,8 @@ const mainWindow = (function () {
 
         const showTemp = document.createElement('div');
         showTemp.setAttribute('id', 'temp');
-        showTemp.textContent = '24°';
+        showTemp.textContent = '24';
+        talkToAPI();
         botHalfCard.appendChild(showTemp);
 
         mainDiv.appendChild(topHalfCard);
